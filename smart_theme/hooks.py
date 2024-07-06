@@ -4,6 +4,8 @@ app_publisher = "newsmart.tech"
 app_description = "erpnext theme "
 app_email = "ammar.alqadasi@gmail.com"
 app_license = "mit"
+app_logo_url = "/assets/smart_theme/logo/logoRect.png"
+
 # required_apps = []
 
 # Includes in <head>
@@ -12,7 +14,11 @@ app_license = "mit"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/smart_theme/css/smart_theme.css"
 # app_include_js = "/assets/smart_theme/js/smart_theme.js"
-
+app_include_css = ["/assets/smart_theme/css/exchange24.css"]
+website_context = {
+        "splash_image": "/assets/smart_theme/logo/splash.png",
+        "favicon": '/assets/smart_theme/favicon.ico',
+        }
 # include js, css files in header of web template
 # web_include_css = "/assets/smart_theme/css/smart_theme.css"
 # web_include_js = "/assets/smart_theme/js/smart_theme.js"
@@ -226,4 +232,9 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
+#fixtures = ['Translation']
+fixtures = [{"dt": "Workspace", "filters": [
+[
+"name", "in", ["Exchange",]
+]
+]},'Translation']
