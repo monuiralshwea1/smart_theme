@@ -233,8 +233,8 @@ website_context = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 #fixtures = ['Translation']
-fixtures = [{"dt": "Workspace", "filters": [
-[
-"name", "in", ["Exchange",]
-]
-]},'Translation']
+#fixtures = [{"dt": "Workspace", "filters": [
+#[
+#"name", "in", ["Exchange",]
+#]
+#]},'Translation']
