@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/exchange2024/css/cairo.woff2) format('woff2');
+  }
+.sidebar-item-label,
+.h4,
+.widget-title,
+.page-title,
+.ellipsis,
+.control-label,
+button,
+h3,h4,h2,
+.section-head
+{
+ font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+ }
+ button.btn-primary,.btn-login {
+  background:var(--blue-700) !important;
+}
+ #navbar-breadcrumbs a {
+  color:var(--blue-900);
+  font-family: Cairo;
+  font-size: small;
+}
+span.h4{color:#333}
+span.ellipsis,span.sidebar-item-label{color:#5f5f5f}
+h3.title-text{color:var(--blue-900);font-size: small !important;}
+.control-label,span.ellipsis, span.sidebar-item-label,button.btn-primary span,.list-row-head,span.dropdown-text,span.button-label,.dropdown-item{font-size:smaller;}
+.control-input{border: #eaf2ff 2px solid;
+  border-radius: 2px;background:var(--blue-900);}
+  .title-area .indicator-pill {font-size: x-small;}
+.navbar{background:var(--blue-400);}
+
+
+.navbar-home img {max-height: 40px;}
+#page-login {background: var(--violet-100);}
+.list-row-head {background: var(--blue-300);
+  text-align: center;
+  line-height: 30px;
+  font-size: smaller;
+  padding: 0;}
+
+.page-content {
+  padding: 5px 0;
+}
+#page-Workspaces {
+  background: var(--blue-700);
+}
+.page-head{margin-bottom:0;height:40px;top:45px !important}
+.navbar{height:45px}
+.layout-main-section-wrapper{padding:0 5px;
+margin-left: 15px;
+}
+.link-text,.shortcut-widget-box {
+  border: 2px solid var(--blue-300);
+  background: var(--blue-50);
+  padding: 5px 7px;
+  min-width: 60%;
+  display: inline-block;
+  color: var(--blue-800);
+  border-radius:5px; 
+}
+.shortcut-widget-box{background: var(--bg-purple)!important;}
+.link-text:hover {
+  border: 2px solid var(--blue-400);
+}
+.sidebar-child-item .desk-sidebar-item
+{
+  margin-right: 10px !important;
+}
+.desk-sidebar-item{
+  margin: 5px auto !important;
+  background: var(--blue-50);
+  border: 2px solid var(--blue-300);
+}
+.desk-sidebar-item.selected {
+  border: 2px solid var(--blue-700);
+}
+.desk-sidebar-item.selected .item-anchor{background: var(--blue-300);}
+.item-anchor:hover {
+  background: var(--blue-200);
+}
+.standard-sidebar-section {
+  padding-right: 10px;
+}
+.page-head .page-head-content
+{height:40px;padding: 6px 0;}
+.layout-side-section {
+  padding-left: 5px !important;
+  padding-right: 5px;
+}
+.list-sidebar{padding: 10px;
+  border-radius: 5px;
+  background: var(--bg-color);
+}
+@media (min-width: 768px) {
+  body.full-width .container {
+    width: 98%;
+  }
+}
+
+.widget.links-widget-box .link-item .disabled-link {
+  color: var(--text-muted);
+  border: 2px solid var(--blue-300);
+background: var(--blue-50);
+  padding: 5px 7px;
+  min-width: 60%;
+  display: inline-block;
+  color: var(--blue-800);
+  border-radius: 5px;
+}
+/* Cairo Font - Smart Theme */
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('/assets/smart_theme/fonts/Cairo-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('/assets/smart_theme/fonts/Cairo-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('/assets/smart_theme/fonts/Cairo-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('/assets/smart_theme/fonts/Cairo-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('/assets/smart_theme/fonts/Cairo-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/assets/smart_theme/fonts/NotoSansArabic-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/assets/smart_theme/fonts/NotoSansArabic-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/assets/smart_theme/fonts/NotoSansArabic-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/assets/smart_theme/fonts/NotoSansArabic-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/assets/smart_theme/fonts/NotoSansArabic-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/assets/smart_theme/fonts/NotoSansArabic-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("/assets/smart_theme/fonts/Rubik-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("/assets/smart_theme/fonts/Rubik-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("/assets/smart_theme/fonts/Rubik-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("/assets/smart_theme/fonts/Rubik-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("/assets/smart_theme/fonts/Rubik-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("/assets/smart_theme/fonts/Rubik-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+.level-item {
+    font-weight: var(--weight-medium);
+    color: var(--neutral-white);
+    align-items: center;
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+
+
+/* Apply Cairo to Print Designer only */
+
+.print-designer,
+.print-format,
+.print-format * {
+  font-family: 'Cairo', 'Noto Sans Arabic', sans-serif !important;
+}
+/* =============================
+   Print Designer & PDF
+   ============================= */

@@ -1,0 +1,150 @@
+/* =========================================================
+   smart_theme — Global "القوائم" theme
+   Matches the lists look of the asset-dashboard:
+   - Colored card headers (blue / green / purple accents)
+   - Dashboard-style items: tinted background + colored left border
+   - Right-aligned text everywhere in lists
+   - Colored bar charts
+   ========================================================= */
+
+/* ---------- 1) List View pages (List/XXX) ---------- */
+
+/* Header row styled as a colored card header (green = "القوائم" card) */
+.list-row-head {
+    background: var(--blue-400) !important;
+    color: #fff !important;
+    border-radius: 8px 8px 0 0;
+    font-weight: 600;
+    text-align: right;
+    padding: 9px 12px !important;
+}
+.list-row-head .level-left,
+.list-row-head .level-right,
+.list-row-head .list-row-col,
+.list-row-head .list-subject,
+.list-row-head a,
+.list-row-head .indicator-pill,
+.list-row-head .ellipsis {
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+.list-row-head .list-check-all,
+.list-row-head input[type="checkbox"] {
+  accent-color: #fff;
+}
+
+/* Each row styled like a dashboard list item */
+.list-row {
+  border: 1px solid #16a34a40;
+  border-left: 4px solid #16a34a;
+  background: #16a34a0d;
+  border-radius: 6px;
+  margin: 8px 0;
+  padding: 9px 12px !important;
+  text-align: right;
+  transition: all 0.15s ease;
+}
+.list-row:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.12);
+  background: #16a34a14;
+}
+.list-row .level-left,
+.list-row .level-right,
+.list-row .ellipsis,
+.list-row .list-row-col,
+.list-row .list-subject {
+  text-align: right;
+}
+.list-row a,
+.list-row .link-text {
+  color: #1d3d63;
+  font-weight: 500;
+}
+.list-row .indicator-pill {
+  border-color: #16a34a;
+}
+.list-row input[type="checkbox"],
+.list-row .list-row-checkbox {
+  accent-color: #16a34a;
+}
+
+/* Right-alignment for all list content */
+.list-row,
+.list-row-head,
+.list-view .level,
+.list-row-col,
+.list-subject {
+  text-align: right;
+}
+
+/* ---------- 2) Workspace Links widgets ---------- */
+
+/* Link items styled like the dashboard list buttons */
+.widget.links-widget-box .link-item {
+  display: block;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 8px;
+  padding: 9px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1d3d63;
+  border-radius: 6px;
+  border: 1px solid #16a34a40;
+  border-left: 4px solid #16a34a;
+  background: #16a34a0d;
+  transition: all 0.15s ease;
+}
+.widget.links-widget-box .link-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.12);
+  background: #16a34a14;
+}
+.widget.links-widget-box .link-item a,
+.widget.links-widget-box .link-item .link-content,
+.widget.links-widget-box .link-item .ellipsis,
+.widget.links-widget-box .link-item .link-text {
+  color: #1d3d63;
+}
+.widget.links-widget-box .link-item .indicator-pill {
+  border-color: #16a34a;
+}
+.widget.links-widget-box .link-item:hover a {
+  color: #14532d;
+}
+
+/* ---------- 3) Colored widget card headers ---------- */
+
+.widget.links-widget-box .widget-head {
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+  font-weight: 600;
+  padding: 10px 12px;
+}
+.widget.links-widget-box .widget-head .widget-title,
+.widget.links-widget-box .widget-head .ellipsis {
+  color: #fff;
+}
+
+/* ---------- 4) Colored bar charts (dashboard palette) ---------- */
+
+.frappe-chart .bars .bar:nth-child(odd) {
+  fill: #2563eb !important;
+}
+.frappe-chart .bars .bar:nth-child(even) {
+  fill: #16a34a !important;
+}
+
+.level-item {
+    font-weight: var(--weight-medium);
+    color: var(--neutral-white);
+    align-items: center;
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
