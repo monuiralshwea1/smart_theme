@@ -14,7 +14,8 @@ app_logo_url = "/assets/smart_theme/logo/logoRect.png"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/smart_theme/css/smart_theme.css"
 # app_include_js = "/assets/smart_theme/js/smart_theme.js"
-app_include_css = ["/assets/smart_theme/css/exchange24.css", "/assets/smart_theme/css/global_lists_v2.css"]
+app_include_css = ["/assets/smart_theme/css/exchange24.css", "/assets/smart_theme/css/global_lists_v2.css", "/assets/smart_theme/css/smart_theme.css"
+]
 website_context = {
         "splash_image": "/assets/smart_theme/logo/splash.png",
         "favicon": '/assets/smart_theme/favicon.ico',
