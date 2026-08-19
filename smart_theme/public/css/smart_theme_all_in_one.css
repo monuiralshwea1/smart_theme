@@ -1,0 +1,591 @@
+/* =====================================================================
+   smart_theme — All-in-One Merged Theme File
+   App: smart_theme (newsmart Erp Theme)
+   Server: /home/newsmart/frappe-bench2/apps/smart_theme/smart_theme/
+   Merged: 2026-08-19
+   =====================================================================
+   هذا الملف يحتوي على جميع ملفات الثيم مدمجة في ملف واحد.
+   كل قسم موضّح بتعليق يبين الملف الأصلي ومن أين أخذ.
+   ===================================================================== */
+
+
+/* =====================================================================
+   SECTION 1: hooks.py (الإعدادات الأساسية للثيم)
+   الملف الأصلي: smart_theme/hooks.py
+   المسار: /home/newsmart/frappe-bench2/apps/smart_theme/smart_theme/hooks.py
+   الوظيفة: تحميل ملفات CSS و JS وتعيين الشعار والأيقونات
+   ===================================================================== */
+
+/*
+   === hooks.py — المحتوى الفعلي ===
+
+   app_name = "smart_theme"
+   app_title = "newsmart Erp Theme"
+   app_publisher = "newsmart.tech"
+   app_description = "erpnext theme"
+   app_email = "ammar.alqadasi@gmail.com"
+   app_license = "mit"
+   app_logo_url = "/assets/smart_theme/logo/logoRect.png"
+
+   # الملفات المحملة في كل صفحة:
+   app_include_css = [
+       "/assets/smart_theme/css/exchange24.css",
+       "/assets/smart_theme/css/global_lists_v2.css",
+       "/assets/smart_theme/css/smart_theme.css"
+   ]
+
+   # صورة السبلاش عند فتح الموقع:
+   website_context = {
+       "splash_image": "/assets/smart_theme/logo/splash.png",
+       "favicon": "/assets/smart_theme/favicon.ico",
+   }
+
+   # الشعار المستخدم في الـ sidebar:
+   # app_logo_url = "/assets/smart_theme/logo/logoRect.png"
+
+   # الخطوط المستخدمة (ملفات .ttf في public/fonts/):
+   # Cairo: Regular, Light, SemiBold, Bold, Black
+   # Noto Sans Arabic: Regular, Light, Medium, SemiBold, Bold, Black
+   # Rubik: Regular, Light, Medium, SemiBold, Bold, Black
+
+   # المجلدات والملفات:
+   # public/css/exchange24.css      — تنسيقات عامة للثيم
+   # public/css/global_lists_v2.css — تنسيقات القوائم وال 연결ات
+   # public/css/smart_theme.css     — الخطوط والتنسيق النهائي
+   # public/smart_theme.scss        — ملف SCSS (يحتوي على تعريف الخطوط)
+   # public/fonts/                   — ملفات الخطوط (Cairo, Noto, Rubik)
+   # public/logo/logoRect.png        — شعار التطبيق
+   # public/logo/splash.png          — صورة السبلاش
+   # public/logo/splash.svg          — شعار SVG
+   # public/favicon.ico              — أيقونة المتصفح
+*/
+
+/* =====================================================================
+   SECTION 2: smart_theme.scss (ملف SCSS — تعريف الخطوط الأساسية)
+   الملف الأصلي: smart_theme/public/smart_theme.scss
+   المسار: /home/newsmart/frappe-bench2/apps/smart_theme/smart_theme/public/smart_theme.scss
+   الوظيفة: تعريف الخطوط الأساسية للثيم
+   ===================================================================== */
+
+@font-face {
+  font-family: "Cairo";
+  src: url("/assets/smart_theme/fonts/Cairo-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/assets/smart_theme/fonts/NotoSansArabic-Regular.ttf") format("truetype");
+}
+
+/* =====================================================================
+   SECTION 3: exchange24.css (تنسيقات عامة — مُعلّقة حالياً على السيرفر)
+   الملف الأصلي: smart_theme/public/css/exchange24.css
+   المسار: /home/newsmart/frappe-bench2/apps/smart_theme/smart_theme/public/css/exchange24.css
+   الوظيفة: تنسيقات عامة للثيم (خطوط، ألوان، تخطيط)
+   ملاحظة: هذا الملف مُعلّق بالكامل في الإنتاج当前 — يُحفظ كمرجع فقط
+   ===================================================================== */
+
+/*
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/exchange2024/css/cairo.woff2) format('woff2');
+}
+.sidebar-item-label,
+.h4,
+.widget-title,
+.page-title,
+.ellipsis,
+.control-label,
+button,
+h3,h4,h2,
+.section-head {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+button.btn-primary,.btn-login {
+  background:var(--blue-700) !important;
+}
+#navbar-breadcrumbs a {
+  color:var(--blue-900);
+  font-family: Cairo;
+  font-size: small;
+}
+span.h4{color:#333}
+span.ellipsis,span.sidebar-item-label{color:#5f5f5f}
+h3.title-text{color:var(--blue-900);font-size: small !important;}
+.control-label,span.ellipsis, span.sidebar-item-label,button.btn-primary span,.list-row-head,span.dropdown-text,span.button-label,.dropdown-item{font-size:smaller;}
+.control-input{border: #eaf2ff 2px solid; border-radius: 2px;background:var(--blue-900);}
+.title-area .indicator-pill {font-size: x-small;}
+.navbar{background:var(--blue-400);}
+.navbar-home img {max-height: 40px;}
+#page-login {background: var(--violet-100);}
+.list-row-head {background: var(--blue-300); text-align: center; line-height: 30px; font-size: smaller; padding: 0;}
+.page-content { padding: 5px 0; }
+#page-Workspaces { background: var(--blue-700); }
+.page-head{margin-bottom:0;height:40px;top:45px !important}
+.navbar{height:45px}
+.layout-main-section-wrapper{padding:0 5px; margin-left: 15px; }
+.link-text,.shortcut-widget-box {
+  border: 2px solid var(--blue-300); background: var(--blue-50);
+  padding: 5px 7px; min-width: 60%; display: inline-block;
+  color: var(--blue-800); border-radius:5px;
+}
+.shortcut-widget-box{background: var(--bg-purple)!important;}
+.link-text:hover { border: 2px solid var(--blue-400); }
+.sidebar-child-item .desk-sidebar-item { margin-right: 10px !important; }
+.desk-sidebar-item { margin: 5px auto !important; background: var(--blue-50); border: 2px solid var(--blue-300); }
+.desk-sidebar-item.selected { border: 2px solid var(--blue-700); }
+.desk-sidebar-item.selected .item-anchor{background: var(--blue-300);}
+.item-anchor:hover { background: var(--blue-200); }
+.standard-sidebar-section { padding-right: 10px; }
+.page-head .page-head-content {height:40px;padding: 6px 0;}
+.layout-side-section { padding-left: 5px !important; padding-right: 5px; }
+.list-sidebar{padding: 10px; border-radius: 5px; background: var(--bg-color); }
+@media (min-width: 768px) { body.full-width .container { width: 98%; } }
+*/
+
+
+/* =====================================================================
+   SECTION 4: global_lists_v2.css (تنسيقات القوائم والروابط — النشط)
+   الملف الأصلي: smart_theme/public/css/global_lists_v2.css
+   المسار: /home/newsmart/frappe-bench2/apps/smart_theme/smart_theme/public/css/global_lists_v2.css
+   الوظيفة: تنسيق القوائم (List View) وروابط Workspaces وبطاقات الألوان
+   الحالة: نشط — محمّل في hooks.py
+   ===================================================================== */
+
+/* ---------- 4.1) List View pages (List/XXX) ---------- */
+
+/* Header row styled as a colored card header (green) */
+.list-row-head {
+  background: #16a34a !important;
+  color: #fff !important;
+  border-radius: 8px 8px 0 0;
+  font-weight: 600;
+  text-align: right;
+  padding: 9px 12px !important;
+}
+.list-row-head .level-left,
+.list-row-head .level-right,
+.list-row-head .list-row-col,
+.list-row-head .list-subject,
+.list-row-head a,
+.list-row-head .indicator-pill,
+.list-row-head .ellipsis {
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+.list-row-head .list-check-all,
+.list-row-head input[type="checkbox"] {
+  accent-color: #fff;
+}
+
+/* Each row styled like a dashboard list item */
+.list-row {
+  border: 1px solid #16a34a40;
+  border-left: 4px solid #16a34a;
+  background: #16a34a0d;
+  border-radius: 6px;
+  margin: 8px 0;
+  padding: 9px 12px !important;
+  text-align: right;
+  transition: all 0.15s ease;
+}
+.list-row:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.12);
+  background: #16a34a14;
+}
+.list-row .level-left,
+.list-row .level-right,
+.list-row .ellipsis,
+.list-row .list-row-col,
+.list-row .list-subject {
+  text-align: right;
+}
+.list-row a,
+.list-row .link-text {
+  color: #1d3d63;
+  font-weight: 500;
+}
+.list-row .indicator-pill {
+  border-color: #16a34a;
+}
+.list-row input[type="checkbox"],
+.list-row .list-row-checkbox {
+  accent-color: #16a34a;
+}
+
+/* Right-alignment for all list content */
+.list-row,
+.list-row-head,
+.list-view .level,
+.list-row-col,
+.list-subject {
+  text-align: right;
+}
+
+/* ---------- 4.2) Workspace Links widgets ---------- */
+
+.widget.links-widget-box .link-item {
+  display: block;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 8px;
+  padding: 9px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1d3d63;
+  border-radius: 6px;
+  border: 1px solid #16a34a40;
+  border-left: 4px solid #16a34a;
+  background: #16a34a0d;
+  transition: all 0.15s ease;
+}
+.widget.links-widget-box .link-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.12);
+  background: #16a34a14;
+}
+.widget.links-widget-box .link-item a,
+.widget.links-widget-box .link-item .link-content,
+.widget.links-widget-box .link-item .ellipsis,
+.widget.links-widget-box .link-item .link-text {
+  color: #1d3d63;
+}
+.widget.links-widget-box .link-item .indicator-pill {
+  border-color: #16a34a;
+}
+.widget.links-widget-box .link-item:hover a {
+  color: #14532d;
+}
+
+/* ---------- 4.3) Colored widget card headers ---------- */
+
+.widget.links-widget-box .widget-head {
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+  font-weight: 600;
+  padding: 10px 12px;
+}
+.widget.links-widget-box .widget-head .widget-title,
+.widget.links-widget-box .widget-head .ellipsis {
+  color: #fff;
+}
+
+/* ---------- 4.4) Colored bar charts (dashboard palette) ---------- */
+
+.frappe-chart .bars .bar:nth-child(odd) {
+  fill: #2563eb !important;
+}
+.frappe-chart .bars .bar:nth-child(even) {
+  fill: #16a34a !important;
+}
+
+
+/* =====================================================================
+   SECTION 5: smart_theme.css (التنسيق الرئيسي للثيم — النشط)
+   الملف الأصلي: smart_theme/public/css/smart_theme.css
+   المسار: /home/newsmart/frappe-bench2/apps/smart_theme/smart_theme/public/css/smart_theme.css
+   الوظيفة: الخطوط الكاملة + تنسيق الشريط الجانبي + التنقل + الطباعة
+   الحالة: نشط — محمّل في hooks.py
+   ===================================================================== */
+
+/* ---------- 5.1) Cairo Font — تعريف جميع الأوزان ---------- */
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('/assets/smart_theme/fonts/Cairo-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('/assets/smart_theme/fonts/Cairo-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('/assets/smart_theme/fonts/Cairo-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('/assets/smart_theme/fonts/Cairo-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('/assets/smart_theme/fonts/Cairo-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+/* ---------- 5.2) Noto Sans Arabic Font — تعريف جميع الأوزان ---------- */
+
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/assets/smart_theme/fonts/NotoSansArabic-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/assets/smart_theme/fonts/NotoSansArabic-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/assets/smart_theme/fonts/NotoSansArabic-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/assets/smart_theme/fonts/NotoSansArabic-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/assets/smart_theme/fonts/NotoSansArabic-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/assets/smart_theme/fonts/NotoSansArabic-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
+/* ---------- 5.3) Rubik Font — تعريف جميع الأوزان ---------- */
+
+@font-face {
+  font-family: "Rubik";
+  src: url("/assets/smart_theme/fonts/Rubik-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("/assets/smart_theme/fonts/Rubik-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("/assets/smart_theme/fonts/Rubik-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("/assets/smart_theme/fonts/Rubik-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("/assets/smart_theme/fonts/Rubik-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("/assets/smart_theme/fonts/Rubik-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
+/* ---------- 5.4) تطبيق الخطوط على العناصر ---------- */
+
+.sidebar-item-label,
+.h4,
+.widget-title,
+.page-title,
+.ellipsis,
+.control-label,
+button,
+h3, h4, h2,
+.section-head {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ---------- 5.5) ألوان وأزرار ---------- */
+
+button.btn-primary, .btn-login {
+  background: var(--blue-700) !important;
+}
+
+#navbar-breadcrumbs a {
+  color: var(--blue-900);
+  font-family: Cairo;
+  font-size: small;
+}
+
+span.h4 { color: #333 }
+span.ellipsis, span.sidebar-item-label { color: #5f5f5f }
+h3.title-text { color: var(--blue-900); font-size: small !important; }
+
+.control-label, span.ellipsis, span.sidebar-item-label,
+button.btn-primary span, .list-row-head, span.dropdown-text,
+span.button-label, .dropdown-item { font-size: smaller; }
+
+.control-input {
+  border: #eaf2ff 2px solid;
+  border-radius: 2px;
+  background: var(--blue-900);
+}
+
+.title-area .indicator-pill { font-size: x-small; }
+
+/* ---------- 5.6) الشريط العلوي (Navbar) ---------- */
+
+.navbar {
+  background: var(--blue-400);
+  height: 45px;
+}
+
+.navbar-home img { max-height: 40px; }
+
+/* ---------- 5.7) صفحة تسجيل الدخول ---------- */
+
+#page-login { background: var(--violet-100); }
+
+/* ---------- 5.8) رؤوس القوائم ---------- */
+
+.list-row-head {
+  background: var(--blue-300);
+  text-align: center;
+  line-height: 30px;
+  font-size: smaller;
+  padding: 0;
+}
+
+/* ---------- 5.9) تخطيط الصفحة ---------- */
+
+.page-content { padding: 5px 0; }
+
+#page-Workspaces { background: var(--blue-700); }
+
+.page-head {
+  margin-bottom: 0;
+  height: 40px;
+  top: 45px !important;
+}
+
+.page-head .page-head-content {
+  height: 40px;
+  padding: 6px 0;
+}
+
+.layout-main-section-wrapper {
+  padding: 0 5px;
+  margin-left: 15px;
+}
+
+.layout-side-section {
+  padding-left: 5px !important;
+  padding-right: 5px;
+}
+
+@media (min-width: 768px) {
+  body.full-width .container { width: 98%; }
+}
+
+/* ---------- 5.10) اختصارات وروابط Workspace ---------- */
+
+.link-text, .shortcut-widget-box {
+  border: 2px solid var(--blue-300);
+  background: var(--blue-50);
+  padding: 5px 7px;
+  min-width: 60%;
+  display: inline-block;
+  color: var(--blue-800);
+  border-radius: 5px;
+}
+
+.shortcut-widget-box { background: var(--bg-purple) !important; }
+
+.link-text:hover {
+  border: 2px solid var(--blue-400);
+}
+
+/* ---------- 5.11) الشريط الجانبي (Sidebar) ---------- */
+
+.sidebar-child-item .desk-sidebar-item {
+  margin-right: 10px !important;
+}
+
+.desk-sidebar-item {
+  margin: 5px auto !important;
+  background: var(--blue-50);
+  border: 2px solid var(--blue-300);
+}
+
+.desk-sidebar-item.selected {
+  border: 2px solid var(--blue-700);
+}
+
+.desk-sidebar-item.selected .item-anchor {
+  background: var(--blue-300);
+}
+
+.item-anchor:hover {
+  background: var(--blue-200);
+}
+
+.standard-sidebar-section {
+  padding-right: 10px;
+}
+
+.list-sidebar {
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--bg-color);
+}
+
+/* ---------- 5.12) روابط معطلة ---------- */
+
+.widget.links-widget-box .link-item .disabled-link {
+  color: var(--text-muted);
+  border: 2px solid var(--blue-300);
+  background: var(--blue-50);
+  padding: 5px 7px;
+  min-width: 60%;
+  display: inline-block;
+  color: var(--blue-800);
+  border-radius: 5px;
+}
+
+/* ---------- 5.13) level-item ---------- */
+
+.level-item {
+  font-weight: var(--weight-medium);
+  color: var(--neutral-white);
+  align-items: center;
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  justify-content: center;
+}
+
+/* ---------- 5.14) خطوط الطباعة ---------- */
+
+.print-designer,
+.print-format,
+.print-format * {
+  font-family: 'Cairo', 'Noto Sans Arabic', sans-serif !important;
+}
